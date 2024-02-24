@@ -18,7 +18,7 @@ for file in glob.glob("papers/*.pdf"):
     try:
         client = OpenAI(
             api_key=os.environ.get(
-                "OPENAI_API_KEY", "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"
+                "OPENAI_API_KEY", ""
             )
         )
         messages = []
