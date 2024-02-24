@@ -42,8 +42,6 @@ for file in glob.glob("papers/*.pdf"):
         with open("output.md", "+a", encoding="utf-8") as f:
             f.write(f"##### {os.path.basename(file).split('.')[0]} \n\n")
             f.write(completion.choices[0].message.content)
-            f.write("\n\n")
-            f.write("---")
-            f.write("\n\n")
+            f.write("\n\n---\n\n")
     except Exception as e:
         print(e)
